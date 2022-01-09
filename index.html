@@ -1,0 +1,76 @@
+<DOCTYPE html!>
+    <html>
+        <head>
+            <title>Factorial Number</title>
+            <style>
+                body {
+                    margin:0;
+                    padding:0;
+                    background-color: #ddd;
+                }
+                h1 {
+                    background-color: darkgreen;
+                    width:20rem;
+                    height:2rem;
+                    text-align: center;
+                    margin-left:32rem;
+                    color:white;
+                    padding:1rem;
+                    border: 5px solid yellow;
+                }
+                h1:hover {
+                    background-color: darkorange;
+                }
+                div {
+                    text-align: center;
+                    padding-top: 10rem;
+                }
+                input {
+                    width :300px;
+                    height: 100px;
+                    text-align: center;
+                    border: 2px solid blueviolet;
+                    
+                }
+                button {
+                    border: 5px solid red;
+                    background-color: cadetblue;
+                    color:cornsilk;
+                    padding:2rem;
+                    font-weight: bolder;
+                    font-size:xx-large; 
+                }
+                button:hover {
+                    background-color: yellow;
+                    color:black
+                }
+    
+            </style>
+        </head>
+        <body>
+            <div>
+            <input type = "number" id="i1" placeholder="Enter positive number"/><br><br>
+            <button onclick='Fact()'>Enter number and click here and  see factorial</button>
+            <p></p>
+        </div>
+            <script>
+                
+                function Factorial(num) {
+                    if (num == 0)return 1;    
+                    else 
+                    return num * Factorial (num - 1);
+                }
+                    function Fact () {
+                        var num1 = document.getElementById("i1").value;
+                        if (num1 == "")
+                        alert("Enter any number");
+                        else if (num1 >= 0) 
+                        {
+                            const Final = Factorial(num1);
+                            document.querySelector("p").innerText = Final;
+                        }
+                    }
+                    
+                </script>
+        </body>
+    </html>
